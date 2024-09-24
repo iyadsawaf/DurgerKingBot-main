@@ -22,6 +22,12 @@ const dev = {
     // console.log(msg);
   },
   define: { createdAt: false },
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false // يمكنك تعديل هذا الخيار بناءً على سياسات الأمان لديك
+    }
+  }
 };
 
 module.exports = { development: dev, test: null, production: null };
